@@ -1,38 +1,35 @@
-// 1. Load environment variables from .env file
 require('dotenv').config();
-
-
-// 2. Import required libraries
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 
-// 3. Create the Express application
 const app = express();
 
-// 4. Middlewares — these run on every request
-app.use(cors());            // Allow React frontend to talk to this server
-app.use(express.json());    // Allow server to understand JSON data
+app.use(cors());
+app.use(express.json());
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // ─── Routes ───
 const authRoutes = require('./routes/auth');
-app.use('/api/auth', authRoutes);  // All auth routes start with /api/auth
+const userRoutes = require('./routes/users');
+const courseRoutes = require('./routes/courses');
+const lectureRoutes = require('./routes/lectures');
 
-// 5. Test route — just to confirm server is working
+app.use('/api/auth', authRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/courses', courseRoutes);
+app.use('/api/lectures', lectureRoutes);
+
 app.get('/', (req, res) => {
   res.send('Lecture Scheduler API is running!');
 });
 
-// 6. Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log('✅ MongoDB connected successfully');
-  })
-  .catch((error) => {
-    console.log('❌ MongoDB connection failed:', error.message);
-  });
+  .then(() => console.log('✅ MongoDB connected successfully'))
+  .catch((error) => console.log('❌ MongoDB connection failed:', error.message));
 
-// 7. Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on port ${PORT}`);
