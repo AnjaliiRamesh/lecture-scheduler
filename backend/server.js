@@ -14,6 +14,10 @@ const app = express();
 app.use(cors());            // Allow React frontend to talk to this server
 app.use(express.json());    // Allow server to understand JSON data
 
+// ─── Routes ───
+const authRoutes = require('./routes/auth');
+app.use('/api/auth', authRoutes);  // All auth routes start with /api/auth
+
 // 5. Test route — just to confirm server is working
 app.get('/', (req, res) => {
   res.send('Lecture Scheduler API is running!');
