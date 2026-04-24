@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import AdminLayout from '../../components/AdminLayout'
 import API from '../../api/axios'
 
@@ -10,6 +11,7 @@ function Dashboard() {
   })
   const [recentLectures, setRecentLectures] = useState([])
   const [loading, setLoading] = useState(true)
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetchDashboardData()
@@ -76,8 +78,18 @@ function Dashboard() {
       </div>
 
       {/* Recent Lectures Table */}
-      <div style={styles.tableCard}>
-        <h3 style={styles.tableTitle}>📋 Recent Lectures</h3>
+      {/* Recent Lectures Table */}
+<div style={styles.tableCard}>
+  <div style={styles.tableTopRow}>
+    <h3 style={styles.tableTitle}>📋 Recent Lectures</h3>
+    <button
+      onClick={() => navigate('/admin/all-lectures')}
+      style={styles.viewAllBtn}
+    >
+      View All →
+    </button>
+  </div>
+
         {recentLectures.length === 0 ? (
           <p style={styles.empty}>No lectures scheduled yet.</p>
         ) : (
@@ -154,12 +166,11 @@ const styles = {
     padding: '24px',
     boxShadow: '0 2px 8px rgba(0,0,0,0.06)'
   },
-  tableTitle: {
-    fontSize: '18px',
-    fontWeight: '600',
-    color: '#1a1a2e',
-    marginBottom: '16px'
-  },
+ tableTitle: {
+  fontSize: '18px',
+  fontWeight: '600',
+  color: '#1a1a2e'
+},
   empty: {
     color: '#999',
     textAlign: 'center',
@@ -187,7 +198,23 @@ const styles = {
     padding: '14px 16px',
     fontSize: '14px',
     color: '#333'
-  }
+  },
+  tableTopRow: {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  marginBottom: '16px'
+},
+viewAllBtn: {
+  padding: '7px 16px',
+  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  color: 'white',
+  border: 'none',
+  borderRadius: '8px',
+  fontSize: '13px',
+  fontWeight: '600',
+  cursor: 'pointer'
+},
 }
 
 export default Dashboard

@@ -14,13 +14,14 @@ function AdminLayout({ children }) {
   }
 
   // Navigation menu items
-  const menuItems = [
-    { path: '/admin/dashboard', label: '📊 Dashboard', },
-    { path: '/admin/instructors', label: '👨‍🏫 Instructors' },
-    { path: '/admin/courses', label: '📚 Courses' },
-    { path: '/admin/add-course', label: '➕ Add Course' },
-    { path: '/admin/add-lecture', label: '🗓️ Add Lecture' },
-  ]
+ const menuItems = [
+  { path: '/admin/dashboard', label: '📊 Dashboard' },
+  { path: '/admin/instructors', label: '👨‍🏫 Instructors' },
+  { path: '/admin/courses', label: '📚 Courses' },
+  { path: '/admin/add-course', label: '➕ Add Course' },
+  { path: '/admin/add-lecture', label: '🗓️ Add Lecture' },
+  { path: '/admin/all-lectures', label: '📋 All Lectures' },
+]
 
   return (
     <div style={styles.container}>

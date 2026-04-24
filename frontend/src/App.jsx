@@ -10,6 +10,7 @@ import Courses from './pages/admin/Courses'
 import AddCourse from './pages/admin/AddCourse'
 import AddLecture from './pages/admin/AddLecture'
 import InstructorDashboard from './pages/instructor/InstructorDashboard'
+import AllLectures from './pages/admin/AllLectures'
 
 // Protected Route
 const ProtectedRoute = ({ children, allowedRole }) => {
@@ -49,6 +50,10 @@ function App() {
         <Route path="/instructor/dashboard" element={
           <ProtectedRoute allowedRole="instructor"><InstructorDashboard /></ProtectedRoute>
         } />
+        
+        <Route path="/admin/all-lectures" element={
+  <ProtectedRoute allowedRole="admin"><AllLectures /></ProtectedRoute>
+} />
       </Routes>
     </BrowserRouter>
   )
