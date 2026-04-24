@@ -1,9 +1,11 @@
 import axios from 'axios'
 
 // Create axios instance with base URL
-const API = axios.create({
-  baseURL: 'http://localhost:5000/api'
+
+ const API = axios.create({
+  baseURL: 'https://lecture-scheduler-backend-ryfk.onrender.com/api'
 })
+
 
 // Automatically attach token to every request
 API.interceptors.request.use((config) => {

@@ -69,7 +69,7 @@ function InstructorDashboard() {
         <div style={styles.cardImage}>
           {lecture.course?.image ? (
             <img
-              src={`http://localhost:5000${lecture.course.image}`}
+              src={`https://lecture-scheduler-backend-ryfk.onrender.com${lecture.course.image}`}
               alt={lecture.course.name}
               style={styles.image}
             />

@@ -61,7 +61,7 @@ function Courses() {
                 <div style={styles.imageContainer}>
                   {course.image ? (
                     <img
-                      src={`http://localhost:5000${course.image}`}
+                      src={`https://lecture-scheduler-backend-ryfk.onrender.com${course.image}`}
                       alt={course.name}
                       style={styles.image}
                     />
