@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "69e9f99556c5c87f73d374ad"
+  },
+  "name": "Admin User",
+  "email": "admin@test.com",
+  "password": "$2b$10$mI6iZfspTWO1BWJk20eVEetdKsiYmRFzp1uJAom0RG7Hq0cfsuL0e",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2026-04-23T10:51:01.310Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-23T10:51:01.310Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69e9f9ea56c5c87f73d374ae"
+  },
+  "name": "Rahul Sharma",
+  "email": "rahul@test.com",
+  "password": "$2b$10$EqYS9i8a50mCSaT9vYF63.Lz9Chf5Mb8D5qm.W3cifvXta4N0v/Ka",
+  "role": "instructor",
+  "createdAt": {
+    "$date": "2026-04-23T10:52:26.147Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-23T10:52:26.147Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69e9fa6f279ff9cfa2b9e419"
+  },
+  "name": "Priya Patel",
+  "email": "priya@test.com",
+  "password": "$2b$10$LYRcHWWA8dyVl2/cDytBh.F0XKuVnypp.rRs2Ssdgo1ynhgXYfWLS",
+  "role": "instructor",
+  "createdAt": {
+    "$date": "2026-04-23T10:54:39.324Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-23T10:54:39.324Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69e9fa90279ff9cfa2b9e41a"
+  },
+  "name": "Amit Singh",
+  "email": "amit@test.com",
+  "password": "$2b$10$q53NFYCUYD43UB0lx1auV.qnnJhaJVjolS7fXYJMWD8D7.dJSz62a",
+  "role": "instructor",
+  "createdAt": {
+    "$date": "2026-04-23T10:55:12.145Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-23T10:55:12.145Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "69ea0e51500399359c21b4d5"
+  },
+  "name": "javascript basic",
+  "level": "Beginner",
+  "description": "learn everything from js",
+  "image": "/uploads/1776946769546.png",
+  "createdBy": {
+    "$oid": "69e9f99556c5c87f73d374ad"
+  },
+  "createdAt": {
+    "$date": "2026-04-23T12:19:29.578Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-23T12:19:29.578Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ea0f44500399359c21b4d6"
+  },
+  "name": "React Intermediate",
+  "level": "Intermediate",
+  "description": "learn everything from scratch",
+  "image": "/uploads/1776947012713.jpeg",
+  "createdBy": {
+    "$oid": "69e9f99556c5c87f73d374ad"
+  },
+  "createdAt": {
+    "$date": "2026-04-23T12:23:32.722Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-23T12:23:32.722Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ea0fc3500399359c21b4d7"
+  },
+  "name": "Node Fullcourse",
+  "level": "Advanced",
+  "description": "learn backend with nodejs",
+  "image": "/uploads/1776947139727.png",
+  "createdBy": {
+    "$oid": "69e9f99556c5c87f73d374ad"
+  },
+  "createdAt": {
+    "$date": "2026-04-23T12:25:39.751Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-23T12:25:39.751Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69eae5b5bd17a59b1bce5647"
+  },
+  "name": "MongoDB Database",
+  "level": "Intermediate",
+  "description": "learn complete MongoDB",
+  "image": "/uploads/1777001909921.png",
+  "createdBy": {
+    "$oid": "69e9f99556c5c87f73d374ad"
+  },
+  "createdAt": {
+    "$date": "2026-04-24T03:38:30.047Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-24T03:38:30.047Z"
+  },
+  "__v": 0
+}]

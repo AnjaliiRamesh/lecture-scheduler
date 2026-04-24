@@ -1,0 +1,46 @@
+[{
+  "_id": {
+    "$oid": "69ea11cc0467771588fb5e12"
+  },
+  "course": {
+    "$oid": "69ea0e51500399359c21b4d5"
+  },
+  "instructor": {
+    "$oid": "69e9f9ea56c5c87f73d374ae"
+  },
+  "date": {
+    "$date": "2024-01-01T00:00:00.000Z"
+  },
+  "title": "Introduction to JavaScript",
+  "description": "First lecture of the course",
+  "createdAt": {
+    "$date": "2026-04-23T12:34:20.096Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-23T12:34:20.096Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69eae606bd17a59b1bce5648"
+  },
+  "course": {
+    "$oid": "69eae5b5bd17a59b1bce5647"
+  },
+  "instructor": {
+    "$oid": "69e9fa6f279ff9cfa2b9e419"
+  },
+  "date": {
+    "$date": "2026-05-01T00:00:00.000Z"
+  },
+  "title": "Introduction to MongoDB",
+  "description": "",
+  "createdAt": {
+    "$date": "2026-04-24T03:39:50.244Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-24T03:39:50.244Z"
+  },
+  "__v": 0
+}]
