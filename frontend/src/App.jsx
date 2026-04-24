@@ -7,6 +7,8 @@ import Login from './pages/Login'
 import Dashboard from './pages/admin/Dashboard'
 import Instructors from './pages/admin/Instructors'
 import Courses from './pages/admin/Courses'
+import AddCourse from './pages/admin/AddCourse'
+import AddLecture from './pages/admin/AddLecture'
 
 // Placeholder
 const InstructorDashboard = () => <div><h1>Instructor Dashboard</h1></div>
@@ -37,6 +39,12 @@ function App() {
         } />
         <Route path="/admin/courses" element={
           <ProtectedRoute allowedRole="admin"><Courses /></ProtectedRoute>
+        } />
+        <Route path="/admin/add-course" element={
+          <ProtectedRoute allowedRole="admin"><AddCourse /></ProtectedRoute>
+        } />
+        <Route path="/admin/add-lecture" element={
+          <ProtectedRoute allowedRole="admin"><AddLecture /></ProtectedRoute>
         } />
 
         {/* Instructor Routes */}
