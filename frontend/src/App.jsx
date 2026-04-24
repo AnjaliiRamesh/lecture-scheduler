@@ -9,9 +9,7 @@ import Instructors from './pages/admin/Instructors'
 import Courses from './pages/admin/Courses'
 import AddCourse from './pages/admin/AddCourse'
 import AddLecture from './pages/admin/AddLecture'
-
-// Placeholder
-const InstructorDashboard = () => <div><h1>Instructor Dashboard</h1></div>
+import InstructorDashboard from './pages/instructor/InstructorDashboard'
 
 // Protected Route
 const ProtectedRoute = ({ children, allowedRole }) => {
