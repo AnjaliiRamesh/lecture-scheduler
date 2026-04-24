@@ -16,13 +16,20 @@ router.post('/', protect, adminOnly, async (req, res) => {
     // This handles cases where time part differs but date is same
     const lectureDate = new Date(date);
 
-    // Start of the day: 00:00:00
-    const startOfDay = new Date(lectureDate);
-    startOfDay.setHours(0, 0, 0, 0);
+// Use UTC methods to avoid timezone issues on server
+const startOfDay = new Date(Date.UTC(
+  lectureDate.getUTCFullYear(),
+  lectureDate.getUTCMonth(),
+  lectureDate.getUTCDate(),
+  0, 0, 0, 0
+));
 
-    // End of the day: 23:59:59
-    const endOfDay = new Date(lectureDate);
-    endOfDay.setHours(23, 59, 59, 999);
+const endOfDay = new Date(Date.UTC(
+  lectureDate.getUTCFullYear(),
+  lectureDate.getUTCMonth(),
+  lectureDate.getUTCDate(),
+  23, 59, 59, 999
+));
 
     // Check if instructor already has a lecture on this date
     const existingLecture = await Lecture.findOne({
